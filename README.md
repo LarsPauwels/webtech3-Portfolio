@@ -1,5 +1,5 @@
 # webtech3-Portfolio
-Webtech 3 poertfolio for labo's
+Webtech 3 portfolio for labo's
 
 
 ## Repo Index & Featurs met Arne:
