@@ -23,5 +23,5 @@ Codepen: [Link Codepen](https://codepen.io/larspauwels-the-animator/pen/rRjRKo)
 ![Grid](https://github.com/LarsPauwels/webtech3-Portfolio/blob/master/Lab%202/grid.jpg)
 
 ### IMDstagram:
-Intern Repo: [Link Repo](https://github.com/LarsPauwels/webtech3-Portfolio/tree/master/Lab%202/IMDstagram)
+Intern Repo: [Link Repo](https://github.com/LarsPauwels/webtech3-Portfolio/tree/master/Lab%202/IMDstagram)<br>
 Codepen: [Link Codepen](https://codepen.io/larspauwels-the-animator/pen/moRgVM)
