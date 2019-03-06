@@ -9,4 +9,4 @@ Ertern Repo: [Link Repo](https://github.com/LarsPauwels/2imd-webtech3-lab1.git)
 Lab1: [Link Repo](https://github.com/LarsPauwels/webtech3-Portfolio/tree/master/Lab%201)
 
 ### Git-it Tutorial:
-![git-it](https://github.com/LarsPauwels/webtech3-Portfolio/blob/master/Lab%201/git-it.jpg | width=200)
+![git-it](https://github.com/LarsPauwels/webtech3-Portfolio/blob/master/Lab%201/git-it.jpg)
