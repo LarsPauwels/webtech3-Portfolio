@@ -13,7 +13,7 @@ Intern Repo: [Link Repo](https://github.com/LarsPauwels/webtech3-Portfolio/tree/
 
 ## Lab 2:
 ### Tickets with grid & flexbox:
-Intern Repo: [Link Repo](https://github.com/LarsPauwels/webtech3-Portfolio/tree/master/Lab%202/tickets)
+Intern Repo: [Link Repo](https://github.com/LarsPauwels/webtech3-Portfolio/tree/master/Lab%202/tickets)<br/>
 Codepen: [Link Codepen](https://codepen.io/larspauwels-the-animator/pen/rRjRKo)
 
 ### Flexbox Tutorial:
