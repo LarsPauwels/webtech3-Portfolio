@@ -28,9 +28,9 @@ class Note {
     // localStorage only supports strings, not arrays
     // if you want to store arrays, look at JSON.parse and JSON.stringify
     let arrLocalstorage = [];
-    let storageCount = localStorage.length;
-    if (storageCount > 0) {
-      arrLocalstorage = JSON.parse(localStorage.getItem("node"));
+
+    if (localStorage.length > 0) {
+      arrLocalstorage = JSON.parse(localStorage.getItem("nodes"));
 
       let arrCount = arrLocalstorage.length;
       arrLocalstorage[arrCount] = noteText;
@@ -38,7 +38,7 @@ class Note {
       arrLocalstorage[0] = noteText;
     }
 
-    localStorage.setItem("node", JSON.stringify(arrLocalstorage));
+    localStorage.setItem("nodes", JSON.stringify(arrLocalstorage));
     //console.log(arrLocalstorage);
   }
   
@@ -57,24 +57,22 @@ class App {
     // pressing the enter key should also work
     this.btnAdd = document.querySelector("#btnAddNote");
     this.btnAdd.addEventListener("click", this.createNote.bind(this));
-    this.loadNotesFromStorage();
+    
+    if (localStorage.length) {
+      this.loadNotesFromStorage();
+    }
   }
   
   loadNotesFromStorage() {
     // HINT🤩
     // load all notes from storage here and add them to the screen
     // something like note.add() in a loop would be nice
-    /*let arrLocalstorage = [];
-    let i = 0;
+    let note = new Note("test");
+    let storedValues = JSON.parse(localStorage.getItem("nodes"));
     
-    arrLocalstorage.forEach(function(text) {
-      i++;
-      arrLocalstorage[i] = localStorage.getItem(`node${text}`);
-      console.log(...arrLocalstorage);
-    });*/
-
-    var storedValues = JSON.parse(localStorage.getItem("node"));
-
+    storedValues.forEach(nodes => {
+      note.add(nodes);
+    });
   }
    
   createNote(e){
