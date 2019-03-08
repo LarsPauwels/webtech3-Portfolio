@@ -16,10 +16,10 @@ class Note {
     // HINT🤩
     // this function should append the note to the screen somehow
     document.querySelector(".notes").innerHTML +=
-      '<div class="card">' +
-        `<p>${note}</p>` +
-        '<a href="#" class="card-remove">Remove</a>' +
-      '</div>'
+    '<div class="card">' +
+    `<p>${note}</p>` +
+    '<a href="#" class="card-remove">Remove</a>' +
+    '</div>'
     ;
   }
   
@@ -51,13 +51,25 @@ class Note {
 class App {
   constructor() {
     console.log("👊🏼 The Constructor!");
-  
+
     // HINT🤩
     // clicking the button should work
-    // pressing the enter key should also work
     this.btnAdd = document.querySelector("#btnAddNote");
     this.btnAdd.addEventListener("click", this.createNote.bind(this));
     
+    // pressing the enter key should also work
+    /* START FUNCTION CREATENOTE WITH KEYDOWN FUNCTION */
+    this.input = document.querySelector("#txtAddNote");
+    this.input.addEventListener("keydown", e => {
+      if(e.keyCode === 13){
+        this.createNote();
+      }
+    });
+
+    /* START FUNCTION CREATENOTE WHEN FORM IS SUBMITTED */
+    /*this.formSend = document.querySelector("form");
+    this.formSend.addEventListener("submit", this.createNote.bind(this));*/
+
     if (localStorage.length) {
       this.loadNotesFromStorage();
     }
@@ -74,8 +86,8 @@ class App {
       note.add(nodes);
     });
   }
-   
-  createNote(e){
+
+  createNote(){
     let noteText = document.querySelector("#txtAddNote").value;
     // this function should create a new note by using the Note() class
     let note = new Note("test");
