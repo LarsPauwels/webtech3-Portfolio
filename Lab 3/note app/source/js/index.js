@@ -27,8 +27,19 @@ class Note {
     // HINT🤩
     // localStorage only supports strings, not arrays
     // if you want to store arrays, look at JSON.parse and JSON.stringify
+    let arrLocalstorage = [];
     let storageCount = localStorage.length;
-    localStorage.setItem(`node${storageCount}`, noteText);
+    if (storageCount > 0) {
+      arrLocalstorage = JSON.parse(localStorage.getItem("node"));
+
+      let arrCount = arrLocalstorage.length;
+      arrLocalstorage[arrCount] = noteText;
+    } else {
+      arrLocalstorage[0] = noteText;
+    }
+
+    localStorage.setItem("node", JSON.stringify(arrLocalstorage));
+    //console.log(arrLocalstorage);
   }
   
   remove(){
@@ -53,7 +64,16 @@ class App {
     // HINT🤩
     // load all notes from storage here and add them to the screen
     // something like note.add() in a loop would be nice
-    console.log(window.localStorage.getItem('node1'));
+    /*let arrLocalstorage = [];
+    let i = 0;
+    
+    arrLocalstorage.forEach(function(text) {
+      i++;
+      arrLocalstorage[i] = localStorage.getItem(`node${text}`);
+      console.log(...arrLocalstorage);
+    });*/
+
+    var storedValues = JSON.parse(localStorage.getItem("node"));
 
   }
    
