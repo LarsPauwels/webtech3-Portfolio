@@ -23,11 +23,6 @@ class Note {
     });
 
     return newNote;
-
-    /*for (var i = 0; i < a.length; i++) {
-      console.log("check");
-      a[i].addEventListener('click', this.remove.bind(newNote));
-    }*/
   }
   
   add(element){
@@ -52,14 +47,17 @@ class Note {
     }
 
     localStorage.setItem("nodes", JSON.stringify(arrLocalstorage));
-    //console.log(arrLocalstorage);
   }
   
   remove(){
     // HINT🤩 the meaning of 'this' was set by bind() in the createElement function
     // in this function, 'this' will refer to the current note createElement
+    this.className += " animated bounceOut";
+    setTimeout(() => {
+      this.style.display = "none";
+    }, 1000);
 
-    this.style.display = "none";
+
   } 
 }
 
@@ -77,7 +75,7 @@ class App {
     this.input = document.querySelector("#txtAddNote");
     this.input.addEventListener("keydown", e => {
       if(e.keyCode === 13){
-        this.createNote;
+        this.createNote();
       }
     });
 
