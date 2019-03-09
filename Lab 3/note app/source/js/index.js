@@ -18,6 +18,8 @@ class Note {
         //let aCount = document.querySelectorAll('.card').length - 1;
         let a = document.getElementsByTagName("a");
         a[i].addEventListener('click', this.remove.bind(newNote));
+        /* USE THIS TO PERMANENTLY DELETE VALUE FROM YOUR LOCALSTORAGE */
+        a[i].addEventListener('click', this.removeFromStorage.bind(title));
         i++;
       }, 500 );
     });
@@ -40,7 +42,7 @@ class Note {
     if (localStorage.length > 0) {
       arrLocalstorage = JSON.parse(localStorage.getItem("nodes"));
 
-      let arrCount = arrLocalstorage.length;
+      const arrCount = arrLocalstorage.length;
       arrLocalstorage[arrCount] = noteText;
     } else {
       arrLocalstorage[0] = noteText;
@@ -56,14 +58,21 @@ class Note {
     setTimeout(() => {
       this.style.display = "none";
     }, 1000);
+  }
 
+  removeFromStorage(element){
+    let arrLocalstorage = JSON.parse(localStorage.getItem("nodes"));
 
-  } 
+    const index = arrLocalstorage.indexOf(this);
+    arrLocalstorage.splice(index, 1);
+
+    localStorage.setItem("nodes", JSON.stringify(arrLocalstorage));
+  }
 }
 
 class App {
   constructor() {
-    console.log("👊🏼 The Constructor!");
+    console.log("🎉 The Constructor! 🎉");
 
     // HINT🤩
     // clicking the button should work
@@ -82,7 +91,7 @@ class App {
     /* START FUNCTION CREATENOTE WHEN FORM IS SUBMITTED */
     /*this.formSend = document.querySelector("form");
     this.formSend.addEventListener("submit", this.createNote.bind(this));*/
-
+    console.log(this);
     if (localStorage.length > 0) {
       this.loadNotesFromStorage();
     }
