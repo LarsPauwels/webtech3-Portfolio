@@ -101,7 +101,7 @@ class App {
     // HINT🤩
     // load all notes from storage here and add them to the screen
     // something like note.add() in a loop would be nice
-    let storedValues = JSON.parse(localStorage.getItem("nodes"));
+    const storedValues = JSON.parse(localStorage.getItem("nodes"));
     
     if (storedValues.length > 0) {
       storedValues.forEach(notes => {
@@ -112,7 +112,7 @@ class App {
   }
 
   createNote(){
-    let noteText = document.querySelector("#txtAddNote").value;
+    const noteText = document.querySelector("#txtAddNote").value;
     // this function should create a new note by using the Note() class
     let note = new Note(noteText);
     // HINT🤩
