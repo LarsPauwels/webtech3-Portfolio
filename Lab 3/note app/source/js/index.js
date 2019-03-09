@@ -2,25 +2,38 @@ class Note {
   constructor(title) {
     this.title = title;
     // HINT🤩 this.element = this.createElement(title);
+    this.element = this.createElement(title);
   }
   
   createElement(title){
-    let newNote = document.createElement('div');
-    
+    let newNote = document.createElement("div");
+    newNote.className = "card";
+    newNote.innerHTML = 
+    `<p>${title}</p>` +
+    '<a href="#" class="card-remove">Remove</a>'
+    ;
     // HINT🤩 a.addEventListener('click', this.remove.bind(newNote));
-    
+    new Promise( (resolve, reject) => {
+      setTimeout( () => {
+        //let aCount = document.querySelectorAll('.card').length - 1;
+        let a = document.getElementsByTagName("a");
+        a[i].addEventListener('click', this.remove.bind(newNote));
+        i++;
+      }, 500 );
+    });
+
     return newNote;
+
+    /*for (var i = 0; i < a.length; i++) {
+      console.log("check");
+      a[i].addEventListener('click', this.remove.bind(newNote));
+    }*/
   }
   
-  add(note){
+  add(element){
     // HINT🤩
     // this function should append the note to the screen somehow
-    document.querySelector(".notes").innerHTML +=
-    '<div class="card">' +
-    `<p>${note}</p>` +
-    '<a href="#" class="card-remove">Remove</a>' +
-    '</div>'
-    ;
+    document.querySelector(".notes").appendChild(element);
   }
   
   saveToStorage(noteText){
@@ -44,7 +57,9 @@ class Note {
   
   remove(){
     // HINT🤩 the meaning of 'this' was set by bind() in the createElement function
-    // in this function, 'this' will refer to the current note element
+    // in this function, 'this' will refer to the current note createElement
+
+    this.style.display = "none";
   } 
 }
 
@@ -62,7 +77,7 @@ class App {
     this.input = document.querySelector("#txtAddNote");
     this.input.addEventListener("keydown", e => {
       if(e.keyCode === 13){
-        this.createNote();
+        this.createNote;
       }
     });
 
@@ -70,7 +85,7 @@ class App {
     /*this.formSend = document.querySelector("form");
     this.formSend.addEventListener("submit", this.createNote.bind(this));*/
 
-    if (localStorage.length) {
+    if (localStorage.length > 0) {
       this.loadNotesFromStorage();
     }
   }
@@ -79,20 +94,22 @@ class App {
     // HINT🤩
     // load all notes from storage here and add them to the screen
     // something like note.add() in a loop would be nice
-    let note = new Note("test");
     let storedValues = JSON.parse(localStorage.getItem("nodes"));
     
-    storedValues.forEach(nodes => {
-      note.add(nodes);
-    });
+    if (storedValues.length > 0) {
+      storedValues.forEach(notes => {
+        let note = new Note(notes);
+        note.add(note.element);
+      });
+    }
   }
 
   createNote(){
     let noteText = document.querySelector("#txtAddNote").value;
     // this function should create a new note by using the Note() class
-    let note = new Note("test");
+    let note = new Note(noteText);
     // HINT🤩
-    note.add(noteText);
+    note.add(note.element);
     note.saveToStorage(noteText);
     this.reset();
   }
@@ -104,4 +121,5 @@ class App {
   
 }
 
+let i = 0;
 let app = new App();
