@@ -25,3 +25,8 @@ Codepen: [Link Codepen](https://codepen.io/larspauwels-the-animator/pen/rRjRKo)
 ### IMDstagram:
 Intern Repo: [Link Repo](https://github.com/LarsPauwels/webtech3-Portfolio/tree/master/Lab%202/IMDstagram)<br>
 Codepen: [Link Codepen](https://codepen.io/larspauwels-the-animator/pen/moRgVM)
+
+## Lab 3:
+### Notes App:
+Intern Repo: [Link Repo](https://github.com/LarsPauwels/webtech3-Portfolio/tree/master/Lab%203/note%20app)<br>
+Codepen: [Link Codepen](https://codepen.io/larspauwels-the-animator/pen/wOdryZ)
