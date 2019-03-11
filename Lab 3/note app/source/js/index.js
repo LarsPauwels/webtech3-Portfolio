@@ -91,7 +91,7 @@ class App {
     /* START FUNCTION CREATENOTE WHEN FORM IS SUBMITTED */
     this.formSend = document.querySelector("form");
     this.formSend.addEventListener("submit", this.createNote.bind(this));
-    console.log(this);
+    
     if (localStorage.length > 0) {
       this.loadNotesFromStorage();
     }
