@@ -81,16 +81,16 @@ class App {
     
     // pressing the enter key should also work
     /* START FUNCTION CREATENOTE WITH KEYDOWN FUNCTION */
-    this.input = document.querySelector("#txtAddNote");
+    /*this.input = document.querySelector("#txtAddNote");
     this.input.addEventListener("keydown", e => {
       if(e.keyCode === 13){
         this.createNote();
       }
-    });
+    });*/
 
     /* START FUNCTION CREATENOTE WHEN FORM IS SUBMITTED */
-    /*this.formSend = document.querySelector("form");
-    this.formSend.addEventListener("submit", this.createNote.bind(this));*/
+    this.formSend = document.querySelector("form");
+    this.formSend.addEventListener("submit", this.createNote.bind(this));
     console.log(this);
     if (localStorage.length > 0) {
       this.loadNotesFromStorage();
