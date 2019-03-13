@@ -92,7 +92,9 @@ class App {
     this.formSend = document.querySelector("form");
     this.formSend.addEventListener("submit", this.createNote.bind(this));
     
-    if (localStorage.length > 0) {
+    const storedValues = JSON.parse(localStorage.getItem("nodes"));
+
+    if (storedValues.length > 0) {
       this.loadNotesFromStorage();
     }
   }
