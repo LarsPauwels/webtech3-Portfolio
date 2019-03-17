@@ -50,7 +50,7 @@ h1 {
 .main-wthree-row {
     width: 25%;
     margin: 2em auto;
-    background: rgba(0, 0, 0, 0.34);
+    background: rgba(0, 0, 0, 0.54);
     background-size: cover; 
     padding: 2em;
 } 
@@ -99,6 +99,7 @@ h1 {
 .w3layouts-slider { 
     width: 70%;
     margin: 3em auto 0;
+    cursor: grab;
 }
 .item.agile-item {
     text-align: center;
@@ -107,7 +108,12 @@ h1 {
     font-size: 0.9em;
     color: #fff;
     font-weight: 300;
-    cursor: pointer;
+}
+
+.agile-item span {
+    font-size: 1.2em;
+    color: #fff;
+    font-weight: 300;
 }
 /*-- //agileinfo-text --*/
 /*--//main--*/

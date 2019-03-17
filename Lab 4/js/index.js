@@ -39,15 +39,15 @@ class Weather {
 			return response.json();
 		}).then(json => {
 			this.addWeather(json);
-			this.getIcon(json);
+			this.getType(json);
 		}).catch(err => {
 			console.log("Weather: " + err);
 		});
 	}
 
-	getIcon(json) {
-		let icon = json.currently.icon;
-		new Background('c62c26e7bd6cfb9382ef5bdd562efe1c9122f59c9faaef09edf67821cdda06c9', icon);
+	getType(json) {
+		let precipType = json.currently.precipType;
+		new Background('c62c26e7bd6cfb9382ef5bdd562efe1c9122f59c9faaef09edf67821cdda06c9', precipType);
 	}
 
 	addWeather(json) {
@@ -60,11 +60,44 @@ class Weather {
 
 		this.placeValues(DOMElements, texts);
 
+		this.addDays(json);
+	}
+
+	addDays(json) {
 		let date_DOM = document.querySelector(".date");
 		let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 		let d = new Date();
-		let date = days[d.getDay()];
+		let currentDay = d.getDay();
+		let date = days[currentDay];
 		date_DOM.innerHTML = date;
+
+		let nextDays_DOM = document.querySelector("#owl-demo");
+		for (var i = 0; i < 7; i++) {
+			let dailyTemp = this.getDaily(json, i);
+			currentDay++;
+			date = days[currentDay];
+			nextDays_DOM.innerHTML += `<div class="item agile-item"><h6>${date}</h6>${dailyTemp}</div>`;
+		}
+
+		this.owlCarousel();
+	}
+
+	getDaily(json, count) {
+		let dailyMin = json.daily.data[count].temperatureMin;
+		let dailyMax = json.daily.data[count].temperatureMax;
+		let dailyAverage = Math.round((dailyMin + dailyMax) /2);
+		return `<span>${dailyAverage}°</span>`;
+	}
+
+	owlCarousel() {
+		$(document).ready(function() { 
+			$("#owl-demo").owlCarousel({ 
+			  autoPlay: 3000,
+			  items : 3,
+			  itemsDesktop : [768,3],
+			  itemsDesktopSmall : [414,4]
+			});
+		});
 	}
 
 	placeValues(DOMElements, texts) {
@@ -76,9 +109,9 @@ class Weather {
 }
 
 class Background {
-	constructor(API_KEY, icon) {
+	constructor(API_KEY, precipType) {
 		this.API_KEY = API_KEY;
-		this.icon = icon;
+		this.precipType = precipType;
 		
 		this.initialize();
 	}
@@ -88,7 +121,7 @@ class Background {
 	}
 
 	getBackground() {
-		let url = `https://cors-anywhere.herokuapp.com/https://api.unsplash.com/search/photos?client_id=${this.API_KEY}&page=1&query=${this.icon}-weather`;
+		let url = `https://cors-anywhere.herokuapp.com/https://api.unsplash.com/search/photos?client_id=${this.API_KEY}&page=1&query=${this.precipType}-weather`;
 		fetch(url, {
 			method: 'get'
 		}).then(response => {
