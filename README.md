@@ -33,5 +33,5 @@ Codepen: [Link Codepen](https://codepen.io/larspauwels-the-animator/pen/wOdryZ)
 
 ## Lab 4:
 ### Weather App (API):
-Intern Repo: [Link Repo](https://github.com/LarsPauwels/webtech3-Portfolio/tree/master/Lab%204/Weather%20App)
+Intern Repo: [Link Repo](https://github.com/LarsPauwels/webtech3-Portfolio/tree/master/Lab%204/Weather%20App)<br>
 Codepen: [Link Codepen](https://codepen.io/larspauwels-the-animator/pen/oVPOYV)
