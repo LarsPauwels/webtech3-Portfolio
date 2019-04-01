@@ -1,0 +1,88 @@
+doctype html
+html(lang='en')
+  head
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Montserrat')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    .container
+      .row
+        nav.menu
+          ul.items
+            li.item
+              i.fa.fa-home(aria-hidden='true')
+            li.item
+              i.fa.fa-user(aria-hidden='true')
+            li.item
+              i.fa.fa-pencil(aria-hidden='true')
+            li.item.item-active
+              i.fa.fa-commenting(aria-hidden='true')
+            li.item
+              i.fa.fa-file(aria-hidden='true')
+            li.item
+              i.fa.fa-cog(aria-hidden='true')
+        section.discussions
+          .discussion.search
+            .searchbar
+              i.fa.fa-search(aria-hidden='true')
+              input(type='text', placeholder='Search...')
+          .discussion.message-active
+            .photo(style='background-image: url(https://weareimd.be/img/social.jpg);')
+              .online
+            .desc-contact
+              p.name Megan Leib
+              p.message 9 pm at the bar if possible 😳
+            .timer 12 sec
+          .discussion
+            .photo(style='background-image: url(http://e0.365dm.com/16/08/16-9/20/theirry-henry-sky-sports-pundit_3766131.jpg?20161212144602);')
+              .online
+            .desc-contact
+              p.name Dave Corlew
+              p.message Let's meet for a coffee or something today ?
+            .timer 3 min
+          .discussion
+            .photo(style='background-image: url(https://randomuser.me/api/portraits/men/32.jpg);')
+            .desc-contact
+              p.name Jerome Seiber
+              p.message I've sent you the annual report
+            .timer 42 min
+          .discussion
+            .photo(style='background-image: url(http://thomasdaubenton.xyz/portfolio/images/photo.jpg);')
+              .online
+            .desc-contact
+              p.name Thomas Dbtn
+              p.message See you tomorrow ! 🙂
+            .timer 2 hour
+          .discussion
+            .photo(style='background-image: url(http://www.boutique-uns.com/uns/185-home_01grid/polo-femme.jpg);')
+            .desc-contact
+              p.name Elsie Amador
+              p.message What the f**k is going on ?
+            .timer 1 day
+          .discussion
+            .photo(style='background-image: url(https://images.pexels.com/photos/979602/pexels-photo-979602.jpeg?auto=compress&cs=tinysrgb&h=350);')
+            .desc-contact
+              p.name Billy Southard
+              p.message Ahahah 😂
+            .timer 4 days
+          .discussion
+            .photo(style='background-image: url(http://static.jbcgroup.com/news/pictures/cc70ae498569ecc11eaeff09224d4ba5.jpg);')
+              .online
+            .desc-contact
+              p.name Paul Walker
+              p.message You can't see me
+            .timer 1 week
+        section.chat
+          .header-chat
+            i.icon.fa.fa-user-o(aria-hidden='true')
+            p.name Megan Leib
+            i.icon.clickable.fa.fa-ellipsis-h.right(aria-hidden='true')
+          .messages-chat
+          .footer-chat
+            i.icon.fa.fa-smile-o.clickable(style='font-size:25pt;', aria-hidden='true')
+            input.write-message(type='text', placeholder='Type your message here')
+            i.icon.send.fa.fa-paper-plane-o.clickable(aria-hidden='true')
+    script(src='/javascripts/index.js').
+
+
