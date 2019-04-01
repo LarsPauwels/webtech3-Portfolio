@@ -35,3 +35,12 @@ Codepen: [Link Codepen](https://codepen.io/larspauwels-the-animator/pen/wOdryZ)
 ### Weather App (API):
 Intern Repo: [Link Repo](https://github.com/LarsPauwels/webtech3-Portfolio/tree/master/Lab%204/Weather%20App)<br>
 Codepen: [Link Codepen](https://codepen.io/larspauwels-the-animator/pen/oVPOYV)
+
+## Lab 5:
+### Node.js Message App (no mongoDB):
+Intern Repo: [Link Repo](https://github.com/LarsPauwels/webtech3-Portfolio/tree/master/Lab%205/Without%20mongoDB)<br>
+Codepen: [Comming Soon](https://codepen.io/larspauwels-the-animator/pen/oVPOYV)
+
+### Node.js Message App (mongoDB):
+Intern Repo: [Link Repo](https://github.com/LarsPauwels/webtech3-Portfolio/tree/master/Lab%205/With%20mongoDB)<br>
+Codepen: [Comming Soon](https://codepen.io/larspauwels-the-animator/pen/oVPOYV)
