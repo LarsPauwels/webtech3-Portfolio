@@ -39,7 +39,9 @@ Codepen: [Link Codepen](https://codepen.io/larspauwels-the-animator/pen/oVPOYV)
 ## Lab 5:
 ### Node.js Message App (no mongoDB):
 Intern Repo: [Link Repo](https://github.com/LarsPauwels/webtech3-Portfolio/tree/master/Lab%205/Without%20mongoDB)<br>
-Codepen: [Comming Soon](https://codepen.io/larspauwels-the-animator/pen/oVPOYV)
+Extern Repo: [Link Repo](https://github.com/LarsPauwels/Nodejs-without-mongoDB)<br>
+Heroku: [Link Heroku](https://lab5-nodejs-without-mongodb.herokuapp.com/)<br>
+Codepen: [Link Codepen](https://codepen.io/larspauwels-the-animator/pen/yrYxMd)
 
 ### Node.js Message App (mongoDB):
 Intern Repo: [Link Repo](https://github.com/LarsPauwels/webtech3-Portfolio/tree/master/Lab%205/With%20mongoDB)<br>
