@@ -45,4 +45,4 @@ Codepen: [Link Codepen](https://codepen.io/larspauwels-the-animator/pen/yrYxMd)
 
 ### Node.js Message App (mongoDB):
 Intern Repo: [Link Repo](https://github.com/LarsPauwels/webtech3-Portfolio/tree/master/Lab%205/With%20mongoDB)<br>
-Codepen: [Comming Soon](https://codepen.io/larspauwels-the-animator/pen/oVPOYV)
+![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `De node.js opdracht met mongoDB werkt offline, maar momenteel nog niet online...`
