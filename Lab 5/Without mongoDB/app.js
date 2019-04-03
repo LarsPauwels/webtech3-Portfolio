@@ -1,22 +1,17 @@
-<<<<<<< HEAD
 const express = require("express");
+const path = require('path');
 const app = express();
 const port = 3000;
 const messageRouter = require("./routers/message");
+const indexRouter = require("./routers/index");
+
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
+
+app.get('/', indexRouter);
 
 app.use(express.json());
-app.get('/', (req, res) => res.send('Hello World!'));
+app.use(express.static(__dirname + '/public'));
 app.use('/api/v1/', messageRouter);
 
-=======
-const express = require("express");
-const app = express();
-const port = 3000;
-const messageRouter = require("./routers/message");
-
-app.use(express.json());
-app.get('/', (req, res) => res.send('Hello World!'));
-app.use('/api/v1/', messageRouter);
-
->>>>>>> 67d841c47c6b2c277496ad9822557fab471cdeb5
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
