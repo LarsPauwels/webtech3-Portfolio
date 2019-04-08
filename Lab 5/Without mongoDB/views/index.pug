@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 doctype html
 html(lang='en')
   head
@@ -33,3 +34,40 @@ html(lang='en')
     script(src='/javascripts/index.js').
 
 
+=======
+doctype html
+html(lang='en')
+  head
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Montserrat')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    .labcheck
+  h1 Enter your api url
+  p Include the full URL, stopping right before the /message keywoard
+  input.labcheckInput(value='https://achterklapweareimdbe.goodbytesdev.now.sh/api/v1', type='text', placeholder='https://my-lab5-api.herokuapp.com/api/v1')
+  button.btnCheck Check my API routes
+  .labcheck__output
+    p.labcheck__output1
+      strong GET messages 
+      span ...
+    p.labcheck__output2
+      strong GET messages/:id 
+      span ...
+    p.labcheck__output3
+      strong POST messages 
+      span ...
+    p.labcheck__output4
+      strong PUT messages/:id 
+      span ...
+    p.labcheck__output5
+      strong DELETE messages/:id 
+      span ...
+    p.labcheck__output6
+      strong GET messages?user=pikachu 
+      span ...
+    script(src='/javascripts/index.js').
+
+
+>>>>>>> 3c0c1363148a4bc1daa3f210ab0516faf923c194
