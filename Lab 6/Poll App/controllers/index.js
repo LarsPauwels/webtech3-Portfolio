@@ -1,6 +1,5 @@
 let get = (req, res) => {
-	let id = req.params.id;
-	console.log(id);
+	res.render('index', { title: 'Express' });
 }
 
 module.exports.get = get;

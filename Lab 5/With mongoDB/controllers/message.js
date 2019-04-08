@@ -1,4 +1,3 @@
-const assert = require('assert');
 const mongo = require('mongodb').MongoClient;
 const url = 'mongodb://localhost:27017';
 

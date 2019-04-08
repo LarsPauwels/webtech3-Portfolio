@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+.labcheckInput
+{
+  width: 100%;
+}
+
+.labcheck__output 
+{
+  font-family: Courier;
+  font-size: 0.85em;
+}
