@@ -4,8 +4,6 @@ const polController = require("../controllers/createpoll");
 
 router.get('/', polController.get);
 
-/*router.post('/', (req, res) => {
-
-});*/
+router.post('/', polController.post);
 
 module.exports = router;
