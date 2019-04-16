@@ -46,3 +46,10 @@ Codepen: [Link Codepen](https://codepen.io/larspauwels-the-animator/pen/yrYxMd)
 ### Node.js Message App (mongoDB):
 Intern Repo: [Link Repo](https://github.com/LarsPauwels/webtech3-Portfolio/tree/master/Lab%205/With%20mongoDB)<br>
 ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `De node.js opdracht met mongoDB werkt offline, maar momenteel nog niet online...`
+
+## Lab 6:
+### Websocket (no mongoDB):
+Intern Repo: [Link Repo](https://github.com/LarsPauwels/webtech3-Portfolio/tree/master/Lab%206/Poll%20App)<br>
+Extern Repo: [Link Repo](https://github.com/LarsPauwels/Poll-App)<br>
+Heroku Vote: [Link Heroku Vote](https://poll-app-larspauwels.herokuapp.com)<br>
+Heroku Createpoll: [Heroku Createpoll](https://poll-app-larspauwels.herokuapp.com/createpoll)
