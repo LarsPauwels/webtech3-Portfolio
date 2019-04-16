@@ -6,17 +6,20 @@ html(lang='en')
   body
     form
       h2 Create your own poll
-      fieldset.material.question
-        input(type='text', placeholder='What’s your favourite programming language?', autocomplete='off', required)
+      fieldset.material
+        input.question(type='text', placeholder='What’s your favourite programming language?', autocomplete='off', required)
         hr
         label Question
 
       fieldset.material
-        input(type='text', placeholder='JS', autocomplete='off', required)
+        input.answer1(type='text', placeholder='JS', autocomplete='off', required)
         hr
         label Anwser 1
 
       fieldset.material
-        input(type='text', placeholder='PHP', autocomplete='off' , required)
+        input.answer2(type='text', placeholder='PHP', autocomplete='off' , required)
         hr
         label Anwser 2
+      input.btn(type='submit', value='Send Poll')
+    script(type='text/javascript' src='/javascripts/primus.js').
+    script(type='text/javascript' src='/javascripts/createpoll.js').

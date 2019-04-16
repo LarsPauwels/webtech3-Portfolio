@@ -1,3 +1,17 @@
-block content
-  h1= title
-  p Welcome to #{title}
+doctype html
+html(lang='en')
+  head
+    title Jade
+    link(rel='stylesheet', type='text/css', href='stylesheets/style.css')
+  body
+    .wrapper
+      .poll-box
+        .poll-container
+          .poll-question Will Poland win the footboal match?
+          .poll-panel.row.mt-30
+            .btn.poll-panel-btn.answer1(aria-role='button', data-result='0', data-vote='0')
+              span Yes
+            .btn.poll-panel-btn.answer2(aria-role='button', data-result='0', data-vote='1')
+              span No
+    script(src='/javascripts/primus.js')
+    script(src='/javascripts/poll.js')
