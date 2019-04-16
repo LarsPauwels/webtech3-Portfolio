@@ -48,7 +48,7 @@ Intern Repo: [Link Repo](https://github.com/LarsPauwels/webtech3-Portfolio/tree/
 ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `De node.js opdracht met mongoDB werkt offline, maar momenteel nog niet online...`
 
 ## Lab 6:
-### Websocket (no mongoDB):
+### Web Socket (no mongoDB):
 Intern Repo: [Link Repo](https://github.com/LarsPauwels/webtech3-Portfolio/tree/master/Lab%206/Poll%20App)<br>
 Extern Repo: [Link Repo](https://github.com/LarsPauwels/Poll-App)<br>
 Heroku Vote: [Link Heroku Vote](https://poll-app-larspauwels.herokuapp.com)<br>
